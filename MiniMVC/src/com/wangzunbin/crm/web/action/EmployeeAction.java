@@ -1,4 +1,4 @@
-package com.wangzunbin.minimvc.action;
+package com.wangzunbin.crm.web.action;
 
 /**
  * ClassName:EmployeeAction  <br/>

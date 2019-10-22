@@ -5,7 +5,7 @@
          version="4.0">
     <filter>
         <filter-name>myWebFilter</filter-name>
-        <filter-class>com.wangzunbin.minimvc.filter.ActionFilter</filter-class>
+        <filter-class>com.wangzunbin.core.web.filter.ActionFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>myWebFilter</filter-name>

@@ -1,4 +1,4 @@
-package com.wangzunbin.minimvc;
+package com.wangzunbin.core.web;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
