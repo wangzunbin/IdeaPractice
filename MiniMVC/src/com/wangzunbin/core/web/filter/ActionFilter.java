@@ -1,6 +1,7 @@
 package com.wangzunbin.core.web.filter;
 
 import com.wangzunbin.core.web.ActionConfig;
+import com.wangzunbin.core.web.ActionContext;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -54,8 +55,14 @@ public class ActionFilter implements Filter {
 //            DepartmentAction action = new DepartmentAction();
 //            action.execute();
 //        }
+        ActionContext.setContext(new ActionContext(req, resp));
         /************  第二版  end  ************/
         ActionConfig actionConfig = actionConfigMap.get(requestUri);
+        if(actionConfig == null) {
+            filterChain.doFilter(servletRequest, servletResponse);
+            return;
+        }
+
         String className = actionConfig.getClassName(); // 获取action类的全限定名
         String method = actionConfig.getMethod(); // 获取action类的方法
         try {

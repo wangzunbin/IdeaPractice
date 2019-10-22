@@ -1,5 +1,7 @@
 package com.wangzunbin.crm.web.action;
 
+import com.wangzunbin.core.web.ActionContext;
+
 /**
  * ClassName:DepartmentAction  <br/>
  * Funtion: ${TODD} <br/>
@@ -10,6 +12,6 @@ package com.wangzunbin.crm.web.action;
 public class DepartmentAction {
 
     public void execute(){
-        System.out.println(".....department......");
+        System.out.println(".....department......" + ActionContext.getContext().getRequest().getParameter("name"));
     }
 }
